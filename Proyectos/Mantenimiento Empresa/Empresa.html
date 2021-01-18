@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+    <script src="empresa.js"></script>
+    <link rel="stylesheet" href="empresa.css">
+</head>
+<body id='body'>
+    <div id="pagina">
+        <div id="cabecera">
+            <h1>Suspensos S.L</h1>
+            <div id="datetime">
+                <input type="datetime-local" id="dateTimeInput"/>
+            </div>
+        </div>
+
+        <div id="cuerpo">
+            <div id="lateral">
+                <button type="button" id='adminTrabajador' class='botones'>Admin. Trabajador</button>
+                <button type="button" id='adminEmpresa' class='botones'>Admin. Empresa</button>
+                <button type="button" id='adminLogin' class='botones'>Login</button>
+            </div>
+            <div id="central">
+                <div id='trabajador' class="admin">
+                    <div id="formularioTrabajador">
+                        <label for="element_1" class="cajas">DNI </label>
+                        <input type="text" maxlength="9" value="" id="dni" class="cajas"/>
+                        <label for="element_2" class="cajas">Nombre </label>
+                        <input type="text" maxlength="255" value="" id="nombre" class="cajas"/> 
+                        <label for="element_3" class="cajas">Horas Contratadas Semanales </label>
+                        <input type="number" maxlength="255" value="" id="hConSemana" class="cajas"/> 
+                        
+                        <button type="button" id='insertar' class="interaccion">Insertar</button>
+                    </div>
+                    <div id="tablaTrabajador" >
+                        <table id="tablaTrabaja" class="trabajadorTabla">
+                            <thead>
+                                <tr>
+                                    <th>DNI</th>
+                                    <th>Nombre</th>
+                                    <th>Horas Semanales Contratado</th>
+                                    <th>Tiempo Trabajado</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id='empresa' class="admin">
+                    <div id="formularioEmpresa">
+                        <label for="element_1" class="cajas">Nombre Empresa </label>
+                        <input type="text" maxlength="255" value="" id="nombreEmpresa" class="cajas"/>
+                        <label for="element_2" class="cajas">Horario Laboral Inicio </label>
+                        <input type="time" maxlength="255" value="" id="hlInicio" class="cajas"/> 
+                        <label for="element_3" class="cajas">Horario Laboral Fin </label>
+                        <input type="time" maxlength="255" value="" id="hlFin" class="cajas"/>
+                        <label for="element_3" class="cajas">Nº Trabajadores Simultaneos</label>
+                        <input type="number" min="1" value="" id="numTraSimultaneo" class="cajas"/> 
+                        
+                        <button type="button" id='botMoficiarEmpresa' class="interaccion">Modificar</button>
+                    </div>
+                </div>
+                <div id='login' class="admin">
+                    <span><b>Hora Actual: </b></span>
+                    <span id='tiempo'></span>
+
+                    <span><b>Plazas Ocupadas: </b></span>
+                    <span id='plazas'></span>
+
+
+                    <div id="formularioTrabajador">
+                        <label for="element_1" class="cajas">Acceso </label>
+                        <input type="text" maxlength="9" value="" id="loginTrabajador" class="cajas"/>
+                        <button type="button" id='botLoginEmpresa' class="interaccion">Acceder</button>
+                    </div>
+                    <div id="tablaTrabajador" >
+                        <h3>Trabajando</h3>
+                        <table id="tablaTrabajando" class="trabajadorTabla">
+                            <thead>
+                                <tr>
+                                    <th>DNI</th>
+                                    <th>Nombre</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="tvesModal" class="modalContainer">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h3>Usuarios de nuestra clinica</h3>
+        </div>
+    </div>-->
+</body>
+</html>

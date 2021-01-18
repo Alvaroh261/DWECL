@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="concesionario.js"></script>
+</head>
+<body>
+    <h1 id="logo"></h1>
+    <h2>STOCK</h2>
+    <table>
+        <tbody id="stock"></tbody>
+    </table>
+
+    <div>
+        <h2>Te compramos tu coche</h2>
+        
+            Matricula <input type="text" name="mat" id="mat">
+            Marca <input type="text" name="mod" id="mar">
+            Modelo <input type="text" name="mod" id="mod">
+            Color <input type="text" name="color" id="color">
+            Año Matriculación <input type="text" name="aniomat" id="aniomat">
+            Precio <input type="text" name="precio" id="precio">
+            
+            <button onclick="guardar();Concesionario.almacenar();">Vender</button>
+        
+    </div>
+</body>
+</html>

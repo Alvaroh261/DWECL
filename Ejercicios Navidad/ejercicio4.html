@@ -1,0 +1,55 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>El primer script</title>
+
+    <script type="text/javascript">
+        var stringMayor = '';
+
+        var numeros = [];
+
+        var valores = [true, 5, false, "hola", "adios", 2];
+        for(let i = 0; i<valores.length; i++) {
+            if(typeof valores[i] === 'string'){
+                if(stringMayor.length < valores[i].length) {
+                    stringMayor = valores[i];
+                }
+            }
+
+            if(typeof valores[i] === 'boolean'){
+                console.log('Tipo boolean: '+valores[i]);
+            }
+
+            if(typeof valores[i] === 'number'){
+                numeros.push(valores[i]);
+            } 
+        }
+        console.log('Esta es la cadena mas grande: '+stringMayor);
+
+        console.log(numeros[0]+numeros[1]);
+        console.log(numeros[0]-numeros[1]);
+        console.log(numeros[0]*numeros[1]);
+        console.log(numeros[0]/numeros[1]);
+        console.log(numeros[0]%numeros[1]);
+
+
+    </script>
+</head>
+
+<body>
+    <p>Ejercicio 4</p>
+</body>
+
+</html>
+
+<!--
+    A partir del siguiente array que se proporciona: var valores = [true, 5, false, "hola", "adios", 2];
+
+    1.- Determinar cual de los dos elementos de texto es mayor
+    2.- Utilizando exclusivamente los dos valores booleanos del array, determinar los operadores necesarios para 
+    obtener un resultado true y otro resultado false
+    3.- Determinar el resultado de las cinco operaciones matemáticas realizadas con los dos elementos numéricos
+-->

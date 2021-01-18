@@ -1,0 +1,41 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>El primer script</title>
+
+    <script type="text/javascript">
+        var numero;
+        var letr;
+        var letra;
+        var expresion_regular_dni;
+    
+        expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+        var dni = '77647028V'
+
+        if(expresion_regular_dni.test (dni) == true) {
+            numero = dni.substr(0,dni.length-1);
+            letr = dni.substr(dni.length-1,1);
+            numero = numero % 23;
+            letra='TRWAGMYFPDXBNJZSQVHLCKET';
+            letra=letra.substring(numero,numero+1);
+        
+            if (letra!=letr.toUpperCase()) {
+                console.log('Dni erroneo, la letra del NIF no se corresponde');
+                
+            } else {
+                console.log('Dni correcto');
+            }
+        } else {
+            console.log('Dni erroneo, formato no válido');
+        }
+    </script>
+</head>
+
+<body>
+    <p>Ejercicio 6</p>
+</body>
+
+</html>

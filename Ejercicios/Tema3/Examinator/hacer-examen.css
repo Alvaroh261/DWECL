@@ -1,0 +1,163 @@
+body
+{
+    background-color: #E5E5E5;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0 ;
+}
+
+#cabecera
+{
+    background-color: #00B8BB;
+    width: 100%;
+    height: 10em;
+    margin: 0 ;
+    float: left;
+}
+
+#principal
+{
+    width: 100%;
+    height: 30em;
+    float: left;
+}
+
+#menu-lateral
+{
+    background-color: white;
+    width: 17%;
+    height: 12em;
+    margin: 1% 1% 0 8%;
+    float: left;
+    padding: 0 0 0 1%;
+}
+
+strong
+{
+    font-size: 20px;
+}
+
+#cuerpo
+{
+    background-color: white;
+    width: 60%;
+    margin: 1% 1% 3% 1%;
+    float: left;
+}
+
+#enunciado
+{
+    background-color: lightblue;
+    width: 100%;
+    margin: 0 ;
+    float: left;
+}
+
+h1
+{
+    font-size: 20px;
+    width: 80%;
+    padding-left: 0.5em;
+}
+
+#bandera
+{
+    width: 20%;
+    float: right;
+}
+
+#img-bandera
+{
+    height: 30px;
+    width: 30px;
+}
+
+#checkbox-bandera
+{
+    font-size: 17px;
+}
+
+#preguntas
+{
+    width: 100%;
+    float: left;
+}
+
+ul
+{
+    list-style-type: none;
+    font-size: 17px;
+}
+
+#boton-finalizar, #boton-anterior, #boton-siguiente
+{
+	background-color:#7892c2;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	color:#ffffff;
+	font-size:15px;
+	padding:5px 40px;
+    text-decoration:none;
+    display:inline-block;
+}
+
+#boton-anterior:hover, #boton-finalizar:hover, #boton-siguiente:hover
+{
+	background-color:#476e9e;
+}
+#boton-anterior:active, #boton-finalizar:active, #boton-siguiente:active
+{
+	position:relative;
+	top:1px;
+}
+
+#boton-siguiente
+{
+    float: right;
+    margin: 0 1em 0 0;
+}
+
+#boton-anterior
+{
+    margin: 0 0 0 1em;
+}
+
+.oculto
+{
+    display: none;
+}
+
+
+
+
+#preguntaAtual {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: black;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-right: 5%;
+}
+
+
+#preguntaAtual::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7892c2;
+    cursor: pointer;
+}
+
+#preguntaAtual::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7892c2;
+    cursor: pointer;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>El primer script</title>
+
+    <script type="text/javascript">
+    /*
+        Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. 
+        A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por 
+        mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+        
+    */ 
+        function MaxMinTexto(texto) {
+            if(typeof texto != 'string') {
+                return 'Lo pasado a la funcion NO es una cadena'
+            } else {
+                if(texto == texto.toUpperCase()) {
+                    return 'La cadena es toda en mayuscula';
+                } else if(texto == texto.toLowerCase()) {
+                    return 'La cadena es toda en minuscula ';
+                } else {
+                    return 'La cadena contiene mayuscula y minuscula';
+                }
+            }
+        }
+        console.log(MaxMinTexto('6'));
+        
+    </script>
+</head>
+
+<body>
+    <p>Ejercicio 9</p>
+</body>
+
+</html>

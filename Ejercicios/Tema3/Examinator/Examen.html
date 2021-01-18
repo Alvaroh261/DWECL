@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://localhost/2daw/Proyectos/Examen-Proyecto/vista/hacer-examen.php -->
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <link rel="stylesheet" href="hacer-examen.css">
+    <link rel="stylesheet" href="cabecera.css">
+    <script>
+        var examenInicioUsuario = "2020-11-26 12:56:30";
+        var examenProgramadoFin = "2020-11-30 23:59:00";
+    </script>
+    <script src="examen.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cabecera.css">
+    <title>Saludo</title>
+
+
+    <div id="cabecera-cabecera">
+        <div id="cabecera-cerrar-sesion">
+            <p><a href="http://localhost/2daw/Proyectos/Examen-Proyecto/vista/cerrar-Sesion.php">Cerrar Sesion</a></p>
+        </div>
+        <div id="cabecera-foto-usu">
+            <img src="suntvoluptasautem.png">
+        </div>
+        <div id="cabecera-usu">
+            <h3>Cosby Burdfield, Patten</h3>
+        </div>
+    </div>
+
+    <div id="principal">
+        <div id="menu-lateral">
+            <p><strong>Examen: </strong> Tema 3</p>
+            <p><strong>Pregunta: </strong> <input type="range" id="preguntaAtual" name="preguntaAtual" value="1" min="1"
+                    max="6" disabled=""></p>
+            <p><strong>Tiempo: </strong><span id="crono">0:1:42</span></p>
+
+            <form action="http://localhost/2daw/Proyectos/Examen-Proyecto/vista/finalizar-examen.php" method="post">
+                <button type="submit" value="Submit" name="boton-finalizar" id="boton-finalizar">Finalizar
+                    Examen</button>
+            </form>
+        </div>
+        <div id="cuerpo">
+
+            <div id="pregunta_1" class="pregunta">
+                <div id="enunciado">
+                    <div id="bandera"><input type="checkbox" name="bandera" id="checkbox-bandera"
+                            value="Pregunta_1"><label for="Pregunta_1" id="checkbox-bandera">🏴 Marcar</label></div>
+                    <h1>1.- Los dos conceptos clave implicados en la programación de una tarea son...</h1>
+                </div>
+                <div id="preguntas">
+                    <ul>
+                        <li><input type="radio" name="Pregunta_1" value="A"><label>A. Los desencadenadores y las
+                                acciones</label></li>
+                        <li><input type="radio" name="Pregunta_1" value="B"><label>B. Los entornos gráficos y
+                                comandos</label></li>
+                        <li><input type="radio" name="Pregunta_1" value="C"><label>C. La automatización y la
+                                programación</label></li>
+                        <li><input type="radio" name="Pregunta_1" value="D"><label>D. La acción y los
+                                encadenadores</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pregunta_2" class="pregunta">
+                <div id="enunciado">
+                    <div id="bandera"><input type="checkbox" name="bandera" id="checkbox-bandera"
+                            value="Pregunta_2"><label for="Pregunta_2" id="checkbox-bandera">🏴 Marcar</label></div>
+                    <h1>2.- ¿Cuál es el comando para crear una tarea desde la línea de comandos?</h1>
+                </div>
+                <div id="preguntas">
+                    <ul>
+                        <li><input type="radio" name="Pregunta_2" value="A"><label>A. schtasks /create</label></li>
+                        <li><input type="radio" name="Pregunta_2" value="B"><label>B. create /task</label></li>
+                        <li><input type="radio" name="Pregunta_2" value="C"><label>C. schtasks</label></li>
+                        <li><input type="radio" name="Pregunta_2" value="D"><label>D. shtasks /new</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pregunta_3" class="pregunta">
+                <div id="enunciado">
+                    <div id="bandera"><input type="checkbox" name="bandera" id="checkbox-bandera"
+                            value="Pregunta_3"><label for="Pregunta_3" id="checkbox-bandera">🏴 Marcar</label></div>
+                    <h1>3.- ¿Qué significan las siglas WSUS?</h1>
+                </div>
+                <div id="preguntas">
+                    <ul>
+                        <li><input type="radio" name="Pregunta_3" value="A"><label>A. Windows Server Update
+                                Services</label></li>
+                        <li><input type="radio" name="Pregunta_3" value="B"><label>B. Windows Services Update
+                                Server</label></li>
+                        <li><input type="radio" name="Pregunta_3" value="C"><label>C. Windows Server Upload
+                                Services</label></li>
+                        <li><input type="radio" name="Pregunta_3" value="D"><label>D. Windows Services Upload
+                                Server</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pregunta_4" class="pregunta">
+                <div id="enunciado">
+                    <div id="bandera"><input type="checkbox" name="bandera" id="checkbox-bandera"
+                            value="Pregunta_4"><label for="Pregunta_4" id="checkbox-bandera">🏴 Marcar</label></div>
+                    <h1>4.- VPN son las siglas de...</h1>
+                </div>
+                <div id="preguntas">
+                    <ul>
+                        <li><input type="radio" name="Pregunta_4" value="A"><label>A. Virtual Private Network</label>
+                        </li>
+                        <li><input type="radio" name="Pregunta_4" value="B"><label>B. Virtual Primary Network</label>
+                        </li>
+                        <li><input type="radio" name="Pregunta_4" value="C"><label>C. Viral Private Network</label></li>
+                        <li><input type="radio" name="Pregunta_4" value="D"><label>D. Viral Pointer Network</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pregunta_5" class="pregunta">
+                <div id="enunciado">
+                    <div id="bandera"><input type="checkbox" name="bandera" id="checkbox-bandera"
+                            value="Pregunta_5"><label for="Pregunta_5" id="checkbox-bandera">🏴 Marcar</label></div>
+                    <h1>5.- Para crear una red VPN necesitamos instalar la Característica...</h1>
+                </div>
+                <div id="preguntas">
+                    <ul>
+                        <li><input type="radio" name="Pregunta_5" value="A"><label>A. Característica de acceso privado
+                                virtual</label></li>
+                        <li><input type="radio" name="Pregunta_5" value="B"><label>B. Ninguna Característica</label>
+                        </li>
+                        <li><input type="radio" name="Pregunta_5" value="C"><label>C. Característica de acceso
+                                remoto</label></li>
+                        <li><input type="radio" name="Pregunta_5" value="D"><label>D. Característica de acceso
+                                interno</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="pregunta_6" class="pregunta">
+                <div id="enunciado">
+                    <div id="bandera"><input type="checkbox" name="bandera" id="checkbox-bandera"
+                            value="Pregunta_6"><label for="Pregunta_6" id="checkbox-bandera">🏴 Marcar</label></div>
+                    <h1>6.- Para añadir un componente hardware al sistema...</h1>
+                </div>
+                <div id="preguntas">
+                    <ul>
+                        <li><input type="radio" name="Pregunta_6" value="A"><label>A. Tenemos que conocer su dirección
+                                IP o, al menos, su MAC, que es única para cada producto</label></li>
+                        <li><input type="radio" name="Pregunta_6" value="B"><label>B. Debemos disponer de los drivers
+                                apropiados.</label></li>
+                        <li><input type="radio" name="Pregunta_6" value="C"><label>C. Debemos conectarlo a un puerto USB
+                                lo más rápido posible.</label></li>
+                        <li><input type="radio" name="Pregunta_6" value="D"><label>D. Hay que insertarlo en un slot de
+                                expansión</label></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="botones-movimientos">
+                <button type="button" name="boton-anterior" id="boton-anterior"
+                    style="visibility: hidden;">Anterior</button>
+                <button type="button" name="boton-siguiente" id="boton-siguiente">Siguiente</button>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</body>
+
+</html>

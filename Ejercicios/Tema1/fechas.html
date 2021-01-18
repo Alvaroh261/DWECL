@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="fechas.js"></script>
+    <style>
+      table, td, th {
+        border: 1px solid black;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+          <td colspan="2"><input type="text" id="data"/></td>
+        </tr>
+        <tr>
+            <td><button onclick="validarFechaString()">Validar</button></td>
+            <td><button onclick="contarDiasVivos()">Dias nacimiento</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="diaSemana()">Día de la semana</button></td>
+            <td><button onclick="fechaMayorMenorIgual()">Es mayor O menor</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="tomarCubatas()">Edad Tomar Cubatas</button></td>
+            <td><button onclick="tomarCubatasFaltanDias()">Dias que faltan para tener los 18 años</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="cuandoMeJubilo()">Jubilación</button></td>
+            <td><button onclick="calculateJubilacionDate()">Fecha Jubilación</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="juevesVivo()">Jueves</button></td>
+            <td> <button onclick="validateHours()">Hora válida</button></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button onclick="validateMinutes()">Minutos válidos</button></td>
+          </tr>
+          <tr>
+            <td><textarea name="data" id="tfechas" cols="30" rows="10"></textarea></td>
+            <td><button onclick="ordenar()">Ordenar</button></td>
+          </tr>
+      </table>
+</body>
+</html>

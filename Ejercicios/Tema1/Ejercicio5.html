@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="Ejercicio5.js">
+
+    </script>
+
+    <script >
+        function cuenta()
+        {
+            var caracter = document.getElementById("letra").value;
+            var texto = document.getElementById("texto").value;
+
+            document.getElementById("resp").innerHTML += 
+            contarLetras(caracter,texto);
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <p>Introduce la letra a contar <input type="text" maxlength="1" id="letra"/>  
+    
+    <textarea id="texto" conls="50" rows="20"></textarea>
+
+    <input type="button" value="contar" onclick="cuenta()"/>
+
+    <span id="resp"></span>
+    </p>
+
+
+</body>
+</html>

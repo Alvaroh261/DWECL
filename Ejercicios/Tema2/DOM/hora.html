@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="hora"></div>
+
+
+    <script>
+        function mostrarHora()
+        {
+            var ahora = new Date();
+            var hora = ahora.getHours();
+            hora = ((hora<10?"0":""))+hora;
+            var minuto = ahora.getMinutes();
+            minuto = ((minuto<10?"0":""))+minuto;
+            var segundo = ahora.getSeconds();
+            segundo = ((segundo<10?"0":""))+segundo;
+
+            document.getElementById("hora").innerHTML = hora+":"+minuto+":"+segundo
+        }
+
+        var timer = setInterval(mostrarHora, 1000)
+
+    </script>
+    
+</body>
+</html>

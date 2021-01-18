@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Empresa</title>
+    </head>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script src="empresa.js"></script>
+    <body>
+
+        <h2>Te toca fichar</h2>
+
+        <input type="text" id="dni" name="dni"/>
+        <button type="button" id="fichar">Fichar</button>
+
+
+        <br/>
+        <br/>
+        <h2>Trabajadores Activos</h2>
+        <table id="tablaActivos">
+            <thead>
+                <th>DNI</th>
+                <th>Hora comienzo</th>
+                <th>Tiempo Trabajando</th>
+                <th>Pausar/Parar</th>
+            </thead>
+            <tbody id="tBodyActivos">
+            </tbody>
+        </table>
+
+
+        <br/>
+        <br/>
+        <h2>Jornada Final</h2>
+        <table id="tablaNoActivos">
+            <thead>
+                <th>DNI</th>
+                <th>Hora comienzo</th>
+                <th>Tiempo Trabajando</th>
+            </thead>
+            <tbody id="tBodyNoActivos">
+            </tbody>
+        </table>
+        <!-- 
+            hacer un control de trabajadores
+los trabajadores llegan y fichan, meten su dni y la hora(no se puede tocar input read only o disabled);
+
+boton fichar
+
+cuando el trabajador ficha, en trabajadores me saldrá el dni la hora de entrada, tiempo de trabajo en tiempo real, boton descanso. se para el tiempo, cuando pincho reanudar se reanuda el tiempo.
+
+al final un control de salida dni y boton salida.
+
+en el margen izquierdo aparece un informe de los trabajadores.
+
+        -->
+        
+    </body>
+</html>

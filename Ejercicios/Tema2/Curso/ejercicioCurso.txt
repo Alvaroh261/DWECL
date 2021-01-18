@@ -1,0 +1,11 @@
+Formulario para añadir un alumno
+nombre
+apellido1
+apellido2
+fecha nacimiento
+
+
+Ordenar por nombre
+Ordenar por apellidos
+Ordenador por fecha de nacimiento
+desmatricular

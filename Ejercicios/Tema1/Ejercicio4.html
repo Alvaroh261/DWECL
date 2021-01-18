@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="Ejercicio4.js"></script>
+
+    <script>
+        function generar()
+        {
+            var numero = document.getElementById("tabla").value;
+
+
+            document.getElementById(lista).innerHTML += 
+            tablaMultiplicar(numero);
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <p>Generar tabla del <input type="text" id="num">  
+        
+    <button onclick="generar()">Generar tabla de multiplicar</button></p>
+
+
+    <div id="tabla">
+
+
+
+    </div>
+</body>
+</html>

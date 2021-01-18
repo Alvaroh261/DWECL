@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUZZLE</title>
+    <script src="puzzle.js"></script>
+    <style>
+        tr {
+            height: 150px;
+        }
+
+        td {
+            width: 200px;
+        }
+
+        span {
+            display: inline-block;
+            height: 150px;
+            width: 200px;
+        }
+
+        #guia {
+            height: 300px;
+            width: 450px;
+            margin-left: 2em;
+        }
+
+        div {
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+                <tbody id="puzzle">
+                    <tr>
+                        <td><span>1</span></td>
+                        <td><span>2</span></td>
+                        <td><span>3</span></td>
+                        <td><span>4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>5</span></td>
+                        <td><span>6</span></td>
+                        <td><span>7</span></td>
+                        <td><span>8</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>9</span></td>
+                        <td><span>10</span></td>
+                        <td><span>11</span></td>
+                        <td><span>12</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>13</span></td>
+                        <td><span>14</span></td>
+                        <td><span>15</span></td>
+                        <td><span id="hueco"></span></td>
+                    </tr>
+                </tbody>
+        </table>
+        <button id="jugar">JUGAR</button>
+    </div>
+    
+    <div>
+        <img src="jaen-48-horas-t.jpg" id="guia"/>
+    </div>
+    
+</body>
+</html>

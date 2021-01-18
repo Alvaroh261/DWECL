@@ -1,0 +1,51 @@
+EJERCICIOS PARA EL PROXIMO DIA
+
+1.- Funcion que pasandole tu edad devuelva si eres mayor de esas
+2.- Funcion que pasandole un dia de la semana te diga cuanto te queda para trabajar
+3.- Funcion que pasandole un dni diga si es correcto o no
+4.- Funcion que pasandole un numero imprime esa tabla de multiplicar
+5.- Funcion que pasandole una letra te diga cuantas hay en el texto
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+/*Ejercicio fechas*/
+
+
+1.- funcion que pasandole una cadena formato español dd/mm/yyyy deuelva true si la fecha es valida
+2.- funcion que pasandole una fecha de nacimiento cuente los dias que llevamos vivos
+3.- que pasandole una fecha devuelve el dia de la semana
+4.- funcion que pasandole dos fechas devuelve 1 si la primera es porterior, 0 si son la misma y -1 si es anterior
+5.- funcion que me diga si me puedo tomar un cubata
+6.- funcion que me diga cuantos dias tengo que esperar para tomarme el cubata
+7.- fecha de jubilacion (67 años)
+8.- funcion que diga los años, meses y dias para jubilarme 
+9.- funcion que cuente los jueves que llevo vivos
+10.- funcion que coja kas fechas de un textArea y las ordene
+11.- funcion que valide si una hora es valida o no
+12.- funcion que valide los minutos que me quedan para ver a mi pareja
+
+
+----------------------------------------------------------------------------------------------
+
+/*Ejercicio expresiones regulares*/
+1.- un numero positivo o negativo
+2.- codigo postal
+3.- numero de cuenta bancario
+4.- tarjeta de credito
+5.- codigo de barrras EAN8, EAN13
+6.- Matricula española XXXXXX-M, M-XXXX-AB, XXXX BGD
+7.- IP 
+8.- MAC
+9.- direccion web
+10.- email
+11.- temperatura grados celsius y farengai
+12.- Aula de este instituto (pcE) -> p platan, c clase, e edifidicio 21B hasta 39 edifidicio a y b
+13.- cordenadas gps
+14.- telefono 0034 TELEFONO, +34 telefono, telefono
+15.- isbn
+16.- nombre persona (nombre y apellido)
+17.- IMEI
+

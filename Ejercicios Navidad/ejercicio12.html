@@ -1,0 +1,80 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>El primer script</title>
+    <!--<script src="ejercicio12.js">-->
+    <script type="text/javascript">
+        /*
+            Escribir un script que simule el lanzamiento de dos dados. Hacer uso de la función Math.random 
+            para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados. Sumar
+            el resultado de lanzar dos dados y anotar en un array el número de apariciones de dicha suma, 
+            repitiendo 36.000 veces esta operación.
+        */
+
+        //Metodo que nos saca un numero aleatorio entre 0 y un numero que le digamos
+        function aleatorio(num) {
+            return Math.round(Math.random() * num)
+        }
+
+        var arraySuma = [];
+        for (let i = 0; i < 36000; i++) {
+            resultado = aleatorio(6)+aleatorio(6);
+            arraySuma.push(resultado);
+        }
+
+        var repetidos = [];
+        arraySuma.forEach(function(numero) {
+            repetidos[numero] = (repetidos[numero] || 0) + 1;
+        });
+
+
+        window.addEventListener("load", function() {
+            var tabla = document.createElement('table');
+            tabla.id = 'myTable';
+            document.body.appendChild(tabla);
+
+            var thead = document.createElement('thead');
+            tabla.appendChild(thead);
+
+            var rowHead = thead.insertRow(0);
+            rowHead.insertCell(0).innerHTML = 'Numeros';
+            rowHead.insertCell(1).innerHTML = 'Repeticiones';
+
+            
+
+            var tbody = document.createElement('tbody');
+            tabla.appendChild(tbody);
+
+            for (let i = 0; i < repetidos.length; i++) {
+                var row = tbody.insertRow(0);
+
+                var cell = row.insertCell(0);
+                cell.innerHTML = i;
+
+                var cell = row.insertCell(1);
+                cell.innerHTML = repetidos[i];
+            }
+        })
+    </script>
+
+    <style> 
+        table, tr {
+            border: 1px solid black;
+        }
+        
+        #myTABLE {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Ejercicio 12</p>
+    <p id="repe"></p>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso</title>
+
+        <!--Cargo la hoja de estilos-->
+        <link rel="stylesheet" href="curso.css"/>
+
+
+        <!--Comienza la carga de las librerias-->
+        <script src="Curso.js">
+
+        </script>
+        <!--Finaliza la carga de las librerias-->
+    </head>
+    <body>
+        <div>
+            <h2>Curso</h2>
+            <table>
+                <thead>
+                    <tr>
+                    <th id="cabeceraNombre">Nombre</th>
+                    <th id="cabecara1Apell">1º Apellido</th>
+                    <th id="cabecara2Apell">2º Apellido</th>
+                    <th id="cabeceraFNacimiento">F.Nacimiento</th>
+                    <th>Quitar</th>
+                    </tr>
+                </thead>
+                <tbody id="listado"></tbody>
+                <tfoot>
+                    <tr>
+                    <td>Nombre <input type="text" name="nombre" id="nombre"/></td>
+                    <td>Primer Apellido <input type="text" name="apellido1" id="apellido1"/></td>
+                    <td>Segundo Apellido <input type="text" name="apellido2" id="apellido2"/></td>
+                    <td>Fecha de Nacimiento <input type="date" name="fNacimiento" id="fNacimiento"/></td>
+                    <td><button id="matricular">Matricular</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </body>
+</html>
