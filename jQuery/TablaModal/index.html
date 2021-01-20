@@ -11,45 +11,41 @@
     <script src="js/milibreria.js"></script>
 
     <style>
-        /* Z-index of #mask must lower than #boxes .window */
-        #mask {
-        position:absolute;
-        z-index:9000;
-        background-color:#000;
-        display:none;
+        #boxes {
+           height: 250px;
+           width: 500px;
+           background-color: yellow;
         }
+
+        #cerrar {
+            width: 100%;
+            height: 25px;
+            background-color: red;
+            text-align: right;
+        }
+
+        #informacion {
+            width: 100%;
+            text-align: center;
+        }
+
+        .oculto {
+            display: none;
+        }
+
         
-        #boxes .window {
-        position:fixed;
-        width:440px;
-        height:200px;
-        display:none;
-        z-index:9999;
-        padding:20px;
-        }
-
-
-        /* Customize your modal window here, you can add background image too */
-        #boxes #dialog {
-        width:375px; 
-        height:203px;
-        }
     </style>
     
 </head>
 <body>
-    <!-- #dialog is the id of a DIV defined in the code below -->
-    <a href="#dialog" name="modal">Boton</a>
-
+    <button id="botonModal">Boton</button>
     <div id="boxes">
-        <!-- #customize your modal window here -->
-        <div id="dialog" class="window">
-            <b>Porbar ventana Modal</b> | 
-            <!-- close button is defined as close class -->
-            <a href="#" class="close">Cerrar</a>
+        <div id="cerrar">
+            <span id="spanCerrar">X</span>
+        </div>	
+        <div id="informacion">
+            <h3>Ventana Modal</h3>
         </div>
-        <!-- Do not remove div#mask, because you'll need it to fill the whole screen -->	
-        <div id="mask"></div>
     </div>
 </body>
 </html>

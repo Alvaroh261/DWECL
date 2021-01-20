@@ -13,20 +13,13 @@ $(document).ready(function () {
 
   //Esto seria un evento, que me dice al hacer click el texto que contiene el td
   $("tbody td").click(function () {
-    //alert($(this).text());
-
     if ($(this).css('color') === "rgb(0, 0, 0)") {
       $(this).css({ 'color': 'red' });
     } else {
       $(this).css({ 'color': 'black' });
     }
-  })
 
-
-  $("tbody td").click(function () {
-    //alert($(this).text());
-
-    if ($(this).text() != "") {
+    /*if ($(this).text() != "") {
       var input = $("<input>").attr("type", "text").val($(this).text());
       $(this).empty().append(input);
       input.focus();
@@ -34,7 +27,13 @@ $(document).ready(function () {
       input.blur(function() {
         $(this).parent().html($(this).val());
       })
-    }
+    }*/
+  })
+
+  $("tbody tr").click(function () {
+    $(this).next().css({ 'background-color': 'lightblue' });
+    $(this).prev().css({ 'background-color': 'rgb(245, 183, 177 )' });
+    $(this).css({ 'background-color': 'rgb(245, 234, 177 )' });
   })
 
   //Al hacer el evento dobleclick quito esa fila
