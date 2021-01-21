@@ -8,21 +8,38 @@ $(document).ready(function () {
     var key = $(this).val();
     var url = "https://restcountries.eu/rest/v2/name/"+ key;
 
-    $("select option").each(function() {
-      $(this).remove();
-    });
-  
-    $.get(url,
-      function (data, textStatus, jqXHR) {
-        // Este data es los datos que yo cojo de la pagina web
+    $.get(url, function (data, status) {
+      if(status == "success")
+      {
+        console.log(data);
+        select.empty();
+        var option;
         for (let i = 0; i < data.length; i++) {
-          if($("select option").eq(i).text() != data[i].name) {
-            var option = $("<option>")
-            option.text(data[i].name);
-            $("select").append(option);
-          }         
+          option = $("<option>").val(data[i].border.join(";")).text(data[i].name);
+          select.append(option);
+          peticionLandaza = false;
+
+          option.click(function (e) { 
+            $.get("https://restcountries.eu/rest/v2/alpha?codes="+$(this).val(),
+            function (data, status) {
+              if(status == "success")
+              {
+                var caja = $("#bandera").empty();
+                for (let i = 0; i < data.length; i++) {
+                  $("<img>").attr({
+                    width: 35,
+                    height: 25,
+                    src: data[i].flag,
+                  });
+                  
+                }
+              }
+            });
+          });
         }
-      }
-    );
+      }       
+    });
   });
+
+
 });
