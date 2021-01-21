@@ -10,9 +10,7 @@ $(document).ready(function () {
 
     $("select option").each(function() {
       $(this).remove();
-  });
-    
-
+    });
   
     $.get(url,
       function (data, textStatus, jqXHR) {
