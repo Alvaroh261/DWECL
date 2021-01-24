@@ -4,18 +4,22 @@
 //window.addEventListener('load', function(){})
 $(document).ready(function () {
 
-  $("#textCountry").keyup(function () {
-    var key = $(this).val();
-    var url = "https://restcountries.eu/rest/v2/name/"+ key;
+  var peticionLandaza = false;
+  var conexion;
 
-    $.get(url, function (data, status) {
+  $("#textCountry").keyup(function () {
+    if(peticionLandaza)
+      conexion.abort();
+
+    peticionLandaza = true;
+    conexion = $.get("https://restcountries.eu/rest/v2/name/"+ $(this).val(), function (data, status) {
       if(status == "success")
       {
-        console.log(data);
         select.empty();
         var option;
+        var fronterizos;
         for (let i = 0; i < data.length; i++) {
-          option = $("<option>").val(data[i].border.join(";")).text(data[i].name);
+          option = $("<option>").val(data[i].borders.join(";")).text(data[i].name);
           select.append(option);
           peticionLandaza = false;
 
@@ -24,14 +28,13 @@ $(document).ready(function () {
             function (data, status) {
               if(status == "success")
               {
-                var caja = $("#bandera").empty();
+                var caja = $("#banderas").empty();
                 for (let i = 0; i < data.length; i++) {
                   $("<img>").attr({
                     width: 35,
                     height: 25,
-                    src: data[i].flag,
-                  });
-                  
+                    src: data[i].flag
+                  }).appendTo(caja);
                 }
               }
             });
@@ -40,6 +43,12 @@ $(document).ready(function () {
       }       
     });
   });
+
+  var objeto = {"size":"20", "multiple":"multiple"};
+  var select = $("<select>").width("200px").attr(objeto)
+  .insertAfter("#textCountry");
+
+  $("<div id='banderas'>").insertAfter(select);
 
 
 });
