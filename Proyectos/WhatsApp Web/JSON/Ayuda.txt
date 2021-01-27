@@ -1,0 +1,15 @@
+Borrar comentario cuendo este operativo
+Identificacion
+
+
+Debo mandar mi telefono y este se queda en una variable de sesion
+La apirest debe devolver, contactos(con foto, nombre(si no lo tengo guardado, el
+numero de telefono), ultimo mensaje, mensajes pendientes de leer, fecha de ultimo mensaje)
+
+objeto tipo contacto:
+[{
+    "telefono":"666666666",
+    "foto":"data:.........",
+    "nombre":"Juan",
+    "ultimo": {"mensaje":"ssssss", "estado":"", "fechaHora":"1234(tiempoUnit)"}
+}]
