@@ -18,6 +18,8 @@
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" href="css/estilos.css">
+
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="libreria.js"></script>
@@ -35,10 +37,9 @@
                     <p class="bg-success text-white" id="nombreChat">Chat</p>
                 </div>
                 <div class="col">
-                    <div class="col" style="height: 300px; background-color: rgba(255,0,0,0.1);">
-                        Conversacion
+                    <div class="col overflow-auto" style="height: 300px; background-color: rgba(255,0,0,0.1);" id="chat">
                     </div>
-                    <div class="col border border-dark">
+                    <div class="col mt-1">
                         <input type="text" class="form-control" placeholder="Escribe un mensaje">
                         <button type="submit" class="btn btn-primary mb-2">Enviar</button>
                     </div>
@@ -46,7 +47,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
