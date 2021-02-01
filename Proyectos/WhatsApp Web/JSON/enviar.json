@@ -1,0 +1,32 @@
+//Para mandar mensaje debemos enviar al servidor
+//receiver=777777
+//message="hola peter"
+//ultimo=45
+{
+    "ultimo": 48,
+    "mensajes": [{
+            "id": 46,
+            "sender": "6666666",
+            "receiver": "7777777",
+            "mensaje": "kajdshfkadjlshfkjash",
+            "estado": 0,
+            "fechaHora": "12:35 21/01/20021"
+        },
+        {
+            "id": 47,
+            "sender": "6666666",
+            "receiver": "7777777",
+            "mensaje": "kajdshfkadjlshfkjash",
+            "estado": 2,
+            "fechaHora": "12:35 21/01/20021"
+        },
+        {
+            "id": 48,
+            "sender": "6666666",
+            "receiver": "7777777",
+            "mensaje": "kajdshfkadjlshfkjash",
+            "estado": 0,
+            "fechaHora": "12:35 21/01/20021"
+        }
+    ]
+}
