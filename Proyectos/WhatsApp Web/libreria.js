@@ -12,13 +12,12 @@ $(document).ready(function () {
                     $(divCon).addClass("border border-dark p-3 mb-2");
                     $(divCon).data("numero", identificado.contactos[i].telefono);
 
-                   
+
                     $(divCon).click(function () {
                         $("#nombreChat").text(identificado.contactos[i].nombre);
-                        
+                        var conversacionSelect = $(this).data("numero");
                         borrar();
-                        
-                        console.log($(this).data("numero"));
+
                         /* Conversaciones de la persona*/
                         $.getJSON("./JSON/conversacion.json",
                             function (data, textStatus, jqXHR) {
@@ -27,6 +26,7 @@ $(document).ready(function () {
                                     var tamConversacion = conversacion.length;
 
                                     for (let i = 0; i < tamConversacion; i++) {
+                                        $(divConv).css({ "background-color": "lightgreen", "float": "right" });
 
                                         var divConv = $("<div>");
                                         var texto = $("<p>").text(conversacion[i].mensaje);
@@ -37,19 +37,20 @@ $(document).ready(function () {
                                         $(divConv).addClass("rounded my-2 mx-3");
 
                                         if (identificado.mitelefono == conversacion[i].sender) {
-                                            $(divConv).css({ "background-color": "lightgreen", "float": "right"});
+                                            $(divConv).css({ "background-color": "lightgreen", "float": "right" });
 
                                         } else {
-                                            $(divConv).css({ "background-color": "white", "float": "left"});
+                                            $(divConv).css({ "background-color": "white", "float": "left" });
 
                                         }
 
                                         $("#chat").append($(divConv));
-                                    }                                       
-                                    
-                                    $("#chat").scrollTop(9999999999999999999999999999e+10);
+                                    }
                                 }
+
+                                $("#chat").scrollTop(9999999999999999999999999999e+10);
                             }
+
                         );
 
                     });
@@ -63,6 +64,6 @@ $(document).ready(function () {
 });
 
 
-function borrar() { 
+function borrar() {
     $("#chat").children().remove();
 }
