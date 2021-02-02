@@ -10,9 +10,15 @@ $(document).ready(function () {
                     var contac = $("<p>").text(identificado.contactos[i].nombre);
                     $(divCon).append(contac);
                     $(divCon).addClass("border border-dark p-3 mb-2");
+                    $(divCon).data("numero", identificado.contactos[i].telefono);
+
+                   
                     $(divCon).click(function () {
                         $("#nombreChat").text(identificado.contactos[i].nombre);
-
+                        
+                        borrar();
+                        
+                        console.log($(this).data("numero"));
                         /* Conversaciones de la persona*/
                         $.getJSON("./JSON/conversacion.json",
                             function (data, textStatus, jqXHR) {
@@ -55,3 +61,8 @@ $(document).ready(function () {
         }
     );
 });
+
+
+function borrar() { 
+    $("#chat").children().remove();
+}
