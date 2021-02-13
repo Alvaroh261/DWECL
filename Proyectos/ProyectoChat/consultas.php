@@ -17,6 +17,13 @@ class Consultas {
         $mensajes = $gbd->mensajesConversacion($usuario1, $usuario2);
         echo json_encode($mensajes);
     }
+
+
+    public function envioMensaje($sender, $recibidor, $imagen, $estado, $fechaEnvio, $mensaje)
+    {
+        $gbd = new GBD();
+        $gbd->insertarMensajes($sender, $recibidor, $imagen, $estado, $fechaEnvio, $mensaje);
+    }
 }
 
 

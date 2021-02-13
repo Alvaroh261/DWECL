@@ -20,6 +20,10 @@ img{ max-width:100%;}
     float: left; width:40%;
 }
 
+.recent_heading_elegido {
+  float: left; width:40%;
+}
+
 .srch_bar {
   display: inline-block;
   text-align: right;
@@ -28,6 +32,12 @@ img{ max-width:100%;}
 
 
 .headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
+
+.headind_srch_elegido{ 
+  overflow:hidden; 
+  border-bottom:1px solid #c4c4c4;
+}
+
 
 .recent_heading h4 {
   color: #05728f;
