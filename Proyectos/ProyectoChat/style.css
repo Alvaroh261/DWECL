@@ -85,6 +85,9 @@ img{ max-width:100%;}
     float: right;
 }
 
+.buscar {
+  cursor: pointer;
+}
 
 
 

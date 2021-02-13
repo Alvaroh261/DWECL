@@ -1,6 +1,8 @@
+/*************************************
+ ********* Peticiones AJAX ***********
+ * **********************************/
 
-
-function contactosChat() {
+function contactosChat(numeroTelefono) {
     /*Recojo la plantilla*/
     var plantilla = $('<div class="chat_list">').load("plantilla_Contactos.html");
 
@@ -8,7 +10,7 @@ function contactosChat() {
     $.ajax({
         url: "AJAX.php",
         method: "GET",
-        data: {funcion: "funcion1"},
+        data: {funcion: "funcion1", numTelefono:numeroTelefono},
         dataType: "json",
         success: function(respuesta) {
             //Accion diferente al otro AJAX
@@ -19,7 +21,8 @@ function contactosChat() {
                 var ultimoMensaje = texto.substr(0,45);
 
                 $(item).find(".chat_name").text(contacto.nombre).css({"cursor": "pointer"});
-                /*$(item).find(".mensaje").text(contacto.nombre);*/
+                //$(item).find(".chat_name").data("telefono_"+contacto.telefono_amigo, contacto.telefono_amigo);
+                
                 $(item).find(".chat_message").text(ultimoMensaje+"...");
                 
                 if(contacto.nombre == "TOMASA"){
@@ -35,11 +38,12 @@ function contactosChat() {
                 }
 
                 $(item).find(".chat_name").click(function () {
-                    $(".msg_history").empty();
-                    conversacionChat();
-                });
+                    var telefono = contacto.telefono;
+                    var telefono_amigo = contacto.telefono_amigo;
 
-                
+                    $(".msg_history").empty();
+                    conversacionChat(telefono, telefono_amigo);
+                });
 
                 $('.inbox_chat').append(item);
             }
@@ -47,19 +51,56 @@ function contactosChat() {
     });
 }
 
-function conversacionChat() {
+function conversacionChat(telefono, telefono_amigo) {
 
-    alert("Busco el numero de esa persona");
+    var plantilla = $('<div class="chat_list">').load("plantilla_Contactos.html");
+    var plantillaRecib = $('<div class="chat_list">').load("plantilla_Contactos.html");
+
+    
     //$(".msg_history").empty();
     
-    /*$.ajax({
+    $.ajax({
         url: "AJAX.php",
         method: "GET",
-        data: {funcion: "funcion1"},
+        data: {funcion: "funcion2", telefono_usu: telefono, telefono_ami: telefono_amigo},
         dataType: "json",
         success: function(respuesta) {
-            
+            console.log(respuesta);
+
+            /*var contactos = respuesta;
+            for (let contacto of contactos) {
+                let item = $(plantilla).clone();
+
+                var ultimoMensaje = texto.substr(0,45);
+
+                $(item).find(".chat_name").text(contacto.nombre).css({"cursor": "pointer"});
+                //$(item).find(".chat_name").data("telefono_"+contacto.telefono_amigo, contacto.telefono_amigo);
+                
+                $(item).find(".chat_message").text(ultimoMensaje+"...");
+                
+                if(contacto.nombre == "TOMASA"){
+                    $(item).find(".chat_estado").text('11').css({"color": "#6793FF"});
+                    $(item).find(".chat_date").text("01/02/20");
+
+                } else if(contacto.nombre == "ALVARO"){
+                    $(item).find(".chat_estado").text('11').css({"color": "#717D7E"});
+                    $(item).find(".chat_date").text("15:45");
+                } else {
+                    $(item).find(".chat_estado").text('1').css({"color": "#717D7E"});
+                    $(item).find(".chat_date").text("Ayer");
+                }
+
+                $(item).find(".chat_name").click(function () {
+                    var telefono = contacto.telefono;
+                    var telefono_amigo = contacto.telefono_amigo;
+
+                    $(".msg_history").empty();
+                    conversacionChat(telefono, telefono_amigo);
+                });
+
+                $('.inbox_chat').append(item);
+            }*/
         }
-    });*/
+    });
 
 }

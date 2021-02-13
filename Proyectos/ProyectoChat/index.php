@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container">
+        <span>Mi Numero: </span><input type="text" class="my-1" id="buscador"> <span class="buscar btn bg-primary">Buscar</span>
         <div class="inbox_msg">
             <div class="inbox_people">
                 <div class="headind_srch">

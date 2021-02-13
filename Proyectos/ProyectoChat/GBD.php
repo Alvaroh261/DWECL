@@ -163,10 +163,26 @@ class GBD
     }
 
 
-    public function contactosUsuario()
+    public function contactosUsuario($numeroTelefono)
     {
-        $sql = "select * from contactos con left join usuario usu 
-        on con.telefono_amigo = usu.telefono  where con.telefono = 669257533;";
+        $sql = "select con.telefono, con.telefono_amigo, usu.nombre, usu.fechaAcceso, usu.foto 
+        from contactos con left join usuario usu 
+        on con.telefono_amigo = usu.telefono  where con.telefono = ".$numeroTelefono.";";
+
+        try {
+            $consulta = $this->conexion->prepare($sql);
+            $consulta->execute();
+            $datos = $consulta->fetchAll(PDO::FETCH_OBJ);
+            return $datos;
+        } catch (PDOException $e) {
+            throw new PDOException("Error leyendo por clave primaria: " . $e->getMessage());
+        }
+    }
+
+    public function mensajesConversacion($usuario1, $usuario2)
+    {
+        $sql = "select * from mensaje where (sender = ".$usuario1." AND  recibidor = ".$usuario2.") 
+        OR (sender = ".$usuario2." AND recibidor = ".$usuario1.") ORDER BY idMensaje DESC;";
 
         try {
             $consulta = $this->conexion->prepare($sql);
@@ -179,6 +195,8 @@ class GBD
     }
 
 
+
+    
 
 
 
