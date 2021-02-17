@@ -58,31 +58,35 @@ function conversacionChat(telefono, telefono_amigo) {
     var plantillaUsuario = $('<div class="outgoing_msg">').load("plantilla_msn_usuario.html");
     var plantillaAmigo = $('<div class="incoming_msg">').load("plantilla_msn_amigo.html");
 
-    $.ajax({
-        url: "AJAX.php",
-        method: "GET",
-        data: { funcion: "funcion2", telefono_usu: telefono, telefono_ami: telefono_amigo },
-        dataType: "json",
-        success: function (respuesta) {
-            var mensajes = respuesta;
-            for (let mensaje of mensajes) {
-                var fecha = fechaHora(mensaje.fechaEnvio);
-
-                if (telefono == mensaje.sender) {
-                    let itemUsu = $(plantillaUsuario).clone();
-                    $(itemUsu).find(".msg_usuario").text(mensaje.mensaje);
-                    $(itemUsu).find(".time_date").text(fecha);
-                    $('.msg_history').append(itemUsu);
-
-                } else {
-                    let itemAmi = $(plantillaAmigo).clone();
-                    $(itemAmi).find(".msg_amigo").text(mensaje.mensaje);
-                    $(itemAmi).find(".time_date").text(fecha);
-                    $('.msg_history').append(itemAmi);
+    setInterval(function () {  
+        $.ajax({
+            url: "AJAX.php",
+            method: "GET",
+            data: { funcion: "funcion2", telefono_usu: telefono, telefono_ami: telefono_amigo },
+            dataType: "json",
+            success: function (respuesta) {
+                $(".msg_history").empty();
+                var mensajes = respuesta;
+                for (let mensaje of mensajes) {
+                    var fecha = fechaHora(mensaje.fechaEnvio);
+    
+                    if (telefono == mensaje.sender) {
+                        let itemUsu = $(plantillaUsuario).clone();
+                        $(itemUsu).find(".msg_usuario").text(mensaje.mensaje);
+                        $(itemUsu).find(".time_date").text(fecha);
+                        $('.msg_history').append(itemUsu);
+    
+                    } else {
+                        let itemAmi = $(plantillaAmigo).clone();
+                        $(itemAmi).find(".msg_amigo").text(mensaje.mensaje);
+                        $(itemAmi).find(".time_date").text(fecha);
+                        $('.msg_history').append(itemAmi);
+                    }
                 }
             }
-        }
-    });
+        });
+    }, 100)
+    
 
 }
 
@@ -127,7 +131,7 @@ function enviarMensaje(mensaje) {
             recibidor: $(".enviar").data("boton"),
             mensaje: mensaje,
             imagen: 0,
-            estado: 0,
+            estado: 2,
             fechaEnvio: fecha
         }
     });
